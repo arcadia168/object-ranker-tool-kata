@@ -28,9 +28,18 @@ describe('Object Ranking Tool', () => {
         });
 
         describe('When a valid array of objects is passed in', () => {
-            it('Should return that array in ranked order', () => {
-                const orderedRanks = rankingTool.orderByRank(rankObjects);
-                expect(orderedRanks[0].name).toBe('The Battle of Blackwater Bay');
+            describe('When no sort order is defined, it sorts by ascending by default', () => {
+                it('Should return that array in ranked order', () => {
+                    const orderedRanks = rankingTool.orderByRank(rankObjects);
+                    expect(orderedRanks[0].name).toBe('The Battle of Blackwater Bay');
+                });
+            })
+
+            describe('When the sort order is passed in', () => {
+                it('Should return that array in ranked order', () => {
+                    const orderedDescRanks = rankingTool.orderByRank(rankObjects, 'desc');
+                    expect(orderedDescRanks[0].name).toBe('The Battle of Winterfell');
+                });
             });
         });
     });
