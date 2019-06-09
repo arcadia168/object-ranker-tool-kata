@@ -29,7 +29,8 @@ describe('Object Ranking Tool', () => {
 
         describe('When a valid array of objects is passed in', () => {
             it('Should return that array in ranked order', () => {
-                // expect(orderedRanks[0].name).toBe('The Battle of Blackwater Bay');
+                const orderedRanks = rankingTool.orderByRank(rankObjects);
+                expect(orderedRanks[0].name).toBe('The Battle of Blackwater Bay');
             });
         });
     });
