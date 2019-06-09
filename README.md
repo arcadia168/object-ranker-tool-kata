@@ -20,6 +20,7 @@ const rankObjects = [
     },
 ];
 
-const orderedRanks = rankingTool.orderByRank(rankObjects); // Now in order!
+const orderedRanks = rankingTool.orderByRank(rankObjects); // Now in asc order!
+const orderedDescRanks = rankingTool.orderByRank(rankObjects, 'desc'); // Now in desc order!
 const averageRank = rankingTool.findAverageRank(rankObjects); // It's 4
 ```
