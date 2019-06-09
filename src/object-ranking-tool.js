@@ -4,7 +4,6 @@ module.exports.orderByRank = (objectsWithRanks, sortOrder) => {
     }
 
     if (sortOrder === 'desc') {
-
         objectsWithRanks.sort((firstElement, nextElement) => {
             return nextElement.rank - firstElement.rank;
         });
