@@ -43,4 +43,23 @@ describe('Object Ranking Tool', () => {
             });
         });
     });
+
+    describe('Finding the average rank', () => {
+        describe('When an array of objects is not passed in', () => {
+            it('Should throw an error with a meaningful error message', () => {
+                try {
+                    const averageRank = rankingTool.findAverageRank();
+                } catch (parameterError) {
+                    expect(parameterError.message).toBe('Please supply a valid array of objects with names and ranks');
+                }
+            });
+        });
+
+        describe('When a valid array of objects is passed in', () => {
+            it('Returns the average rank of the array of ranked objects', () => {
+                const averageRank = rankingTool.findAverageRank(rankObjects);
+                expect(averageRank).toBe(4);
+            });
+        });
+    });
 });
