@@ -19,14 +19,17 @@ describe('Object Ranking Tool', () => {
     describe('Ordering the object ranks', () => {
         describe('When an array of objects is not passed in', () => {
             it('Should throw an error with a meaningful error message', () => {
-                const orderedRanks = rankingTool.orderByRank();
-                expect(orderedRanks[0].name).toBe('The Battle of Blackwater Bay');
+                try {
+                    const orderedRanks = rankingTool.orderByRank();
+                } catch (parameterError) {
+                    expect(parameterError.message).toBe('Please supply a valid array of objects with names and ranks');
+                }
             });
         });
 
         describe('When a valid array of objects is passed in', () => {
             it('Should return that array in ranked order', () => {
-
+                // expect(orderedRanks[0].name).toBe('The Battle of Blackwater Bay');
             });
         });
     });
