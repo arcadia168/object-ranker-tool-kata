@@ -1,0 +1,19 @@
+{
+  "name": "ranking-average-tool",
+  "version": "1.0.0",
+  "description": "A small tool for ranking and averaging objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "tool",
+    "ranking",
+    "kata"
+  ],
+  "author": "***REMOVED*** ***REMOVED***",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
