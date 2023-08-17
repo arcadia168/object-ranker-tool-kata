@@ -11,7 +11,7 @@
     "ranking",
     "kata"
   ],
-  "author": "***REMOVED*** ***REMOVED***",
+  "author": "Erin Eland",
   "license": "ISC",
   "devDependencies": {
     "jest": "^24.8.0"
